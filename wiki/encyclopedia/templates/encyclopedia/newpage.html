@@ -1,0 +1,17 @@
+
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<h1>Add New Page:</h1>
+<form action="{% url 'createnewpage' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+</br>
+    <input type="submit">
+</form>
+<a href="{% url 'index' %}">Home page</a>
+
+{% endblock %}

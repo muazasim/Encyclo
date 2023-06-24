@@ -1,0 +1,12 @@
+
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Encyclopedia-{{Title}}
+{% endblock %}
+
+{% block body %}
+<div>
+{{EntryData|safe}}
+<button > <a href="{% url 'updateentry' Title %}"> Update </a></button>
+</div>
+{% endblock %}
